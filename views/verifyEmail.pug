@@ -1,0 +1,52 @@
+doctype html
+html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;")
+  head
+    meta(name='viewport' content='width=device-width')
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css')
+    title LIMITD
+  body(style='min-height: 100%;max-height: 100%;')
+    .mx-auto(style='min-width: 640px;max-width: 640px;')
+      .col
+        // header
+        .flex(style='background-color: #FAFAFA; padding: 22px 0 22px 0;')
+          p.text-5xl.font-bold(style='color:#061086;padding-left: 38px;') LIMITD
+        // Title
+        .mx-auto(style='background-color: #FAFAFA')
+          p.text-center.font-bold(style='font-size: 30px;color:black;padding: 38px 0 38px 0;') Verify Your Limitd Account
+        div(style='height: 600px;')
+          // text
+          .py-20
+            p(style='padding:0 51px 0 51px;font-size: 14px;')
+              | To make your Limitd account more secure and to receive important messages and transaction history from Limitd, please click the link below to verify your email address. A confirmation message will appear subsequently. This link is valid for 24 hours only.
+          div
+            .flex.justify-center.text-xl(style='height: 50px;margin: 0px 0 78px 0;')
+              a.flex(href=`${button_link}`)
+                button.font-bold(style='background-color:#061086' )
+                    p.px-40.text-white Verify
+        // footer
+        .flex.flex-col(style='background-color: #FAFAFA; padding: 14px 0 10px 0;')
+          .flex.flex-row.justify-between.px-6
+            p.pt-6.font-bold.text-3xl(style='color:#061086') LIMITD
+            div
+              .flex.flex-row.pt-4(class='lg:w-full sm:flex-col md:w-full')
+                .flex.flex-wrap.gap-6(class='lg:gap-4')
+                    a.flex(href=`${facebook_link}`)
+                        .h-10.w-10(style='background-color: #EBEBEB;')
+                            img.mx-auto.mt-3(src='facebook1.png')
+                    a.flex(href=`${insta_link}`)
+                        .h-10.w-10.mr-0(style='background-color: #EBEBEB;')
+                            img.mx-auto.mt-3(src='insta.png')
+                    a.flex(href=`${twitter_link}`)
+                        .h-10.w-10.ml-0(style='background-color: #EBEBEB;')
+                            img.mx-auto.mt-3(src='twitter.png')
+          .text-center.pt-4(style='color: #979797;')
+            | © 2020 Limitd. All Rights Reserved.
+            br
+            |                     The sender of this email is Limitd, located at #{sender_address}
+            br
+            br
+            // 123 Subang Jaya, Selangor, 47600, Malaysia.
+            | To unsubscribe, 
+            a.cursor-pointer(class='hover:text-blue-600' href=`${unsubscribe_link}`) click here
+            | .
