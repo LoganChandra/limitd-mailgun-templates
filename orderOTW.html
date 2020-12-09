@@ -35,16 +35,16 @@
             <!-- total table -->
             <div class="flex flex-row pt-8" style="padding:73px 51px 73px 51px;">
                 <div class="flex flex-col w-1/2">
-                    <img class="pt-16" src="%shoe_image%" alt="">
+                    <img class="pt-16" src="#{shoe_image}" alt="">
                 </div>
                 <div class="flex-col w-1/2 text-justify p-4">
                     <div class="font-bold text-4xl">
-                        %shoe_name%<br><br>
+                        #{shoe_name}<br><br>
                     </div>
                     <div style="font-size:12px">
-                        Size: UK %shoe_size%<br>
+                        Size: UK #{shoe_size}<br>
                         Condition:  Brand New 100% Authentic<br>
-                        Order Number: %order_number%<br><br>
+                        Order Number: #{order_number}<br><br>
 
                         <div class="flex flex-row pb-4 border-black" style="    border-bottom-width: 1px;">
                             <div class="flex flex-col w-3/5">
@@ -54,10 +54,10 @@
                                 <p>Shipping:</p>
                             </div>
                             <div class="text-left w-2/5">
-                                <p>RM %price%</p>
-                                <p>RM %processing_fee%</p>
-                                <p>RM %authentication_fee%</p>
-                                <p>RM %shipping_fee%</p>
+                                <p>RM #{price}</p>
+                                <p>RM #{processing_fee}</p>
+                                <p>RM #{authentication_fee}</p>
+                                <p>RM #{shipping_fee}</p>
                                 <!-- <p>RM 9999</p>
                                 <p>RM 9999</p>
                                 <p>RM 9999</p>
@@ -67,7 +67,7 @@
                         <div>
                             <div class="flex flex-row pt-6">
                                 <p class="font-extrabold w-3/5">Total Payment</p>
-                                <p class="font-extrabold w-2/5">RM %total%</p>
+                                <p class="font-extrabold w-2/5">RM #{total}</p>
                             </div>
                         </div>
                         
@@ -80,7 +80,7 @@
                     <button
                         class="font-bold cursor-pointer"
                         style="background-color:#061086"
-                        href="%button_link%"
+                        href="#{button_link}"
                     >
                     <p class="px-40 text-white">View Order</p>
                       
@@ -97,14 +97,14 @@
                               <div class="h-10 w-10" style="background-color: #EBEBEB;">
                                 <img
                                   class="mx-auto mt-3"
-                                  src="%facebook_icon%"
+                                  src="#{facebook_icon}"
                                 />
                               </div>
                               <div class="h-10 w-10 mr-0" style="background-color: #EBEBEB;">
-                                <img class="mx-auto mt-3" src="%insta_icon%" />
+                                <img class="mx-auto mt-3" src="#{insta_icon}" />
                               </div>
                               <div class="h-10 w-10 ml-0" style="background-color: #EBEBEB;">
-                                <img class="mx-auto mt-3" src="%twitter_icon%" />
+                                <img class="mx-auto mt-3" src="#{twitter_icon}" />
                               </div>
                             </div>
                           </div>
@@ -112,9 +112,9 @@
                 </div>
                 <div class="text-center pt-4" style="color: #979797;">
                     © 2020 Limitd. All Rights Reserved.<br>
-                    The sender of this email is Limitd, located at %sender_address%<br><br>
+                    The sender of this email is Limitd, located at #{sender_address}<br><br>
                     <!-- 123 Subang Jaya, Selangor, 47600, Malaysia. -->
-                    To unsubscribe, <a class="cursor-pointer hover:text-blue-600" href="%unsubscribe_link%">click here</a>.
+                    To unsubscribe, <a class="cursor-pointer hover:text-blue-600" href="#{unsubscribe_link}">click here</a>.
 
                 </div>
             </div>
