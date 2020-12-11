@@ -21,7 +21,6 @@ app.get('/', (req, res) => {
         facebook_link : '#',
         insta_link : '#',
         twitter_link : '#'
-
     })
 })
 
