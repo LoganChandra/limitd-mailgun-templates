@@ -3,21 +3,39 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
   head
     meta(name='viewport' content='width=device-width')
     meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
-    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css')
+    
     title LIMITD
+    style.
+
+      @media (min-width: 640px) {
+        .mediaWidth { flex-direction: coloumn; }
+      }      
+      @media (min-width: 768px) {
+        .mediaWidth { width: 100% }
+      }
+      
+      @media (min-width: 1024px) {
+        .mediaWidth { width: 100%; }
+        .mediaGap { gap: 1rem; }
+      }
+      
+      @media (min-width: 1280px) {
+        
+      } 
+
   body(style='min-height: 100%;max-height: 100%;')
-    .mx-auto(style='min-width: 640px;max-width: 640px;')
+    div(style='min-width: 640px;max-width: 640px;margin-left:auto;margin-right:auto')
       .col
         // header
-        .flex(style='background-color: #FAFAFA; padding: 22px 0 22px 0;')
-          p.text-5xl.font-bold(style='color:#061086;padding-left: 38px;') LIMITD
+        div(style='background-color: #FAFAFA; padding: 22px 0 22px 0;display:flex;')
+          p(style='color:#061086;padding-left: 38px;font-size:3rem;line-height:1;font-weight:700') LIMITD
         // Title
-        .mx-auto(style='background-color: #FAFAFA')
-          p.text-center.font-bold(style='font-size: 30px;color:black;padding: 38px 0 38px 0;') Seller Verification Status
+        div(style='background-color: #FAFAFA;margin-right:auto;margin-left:auto')
+          div(style='font-size: 30px;color:black;padding: 38px 0 38px 0;text-align:center;font-weight:700') Seller Verification Status
         div(style='height: 600px;')
           // text
-          .py-20
-            p(style='padding:0 51px 0 51px;font-size: 14px;')
+          div(style="padding-top:5rem;padding-bottom:5rem")
+            p(style='padding:0 51px 0 51px;font-size: 14px;text-align: justify;')
               | We are unable to verify your seller details due to either one of the following reasons:
               br
               br
@@ -30,22 +48,22 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
               br
               |                   To appeal or resubmit your details, please contact customer support.
         // footer
-        .flex.flex-col(style='background-color: #FAFAFA; padding: 14px 0 10px 0;')
-          .flex.flex-row.justify-between.px-6
-            p.pt-6.font-bold.text-3xl(style='color:#061086') LIMITD
+        div(style='background-color: #FAFAFA; padding: 14px 0 10px 0;display:flex;flex-direction:column;')
+          div(style="display:flex;flex-direction:row;justify-content:space-between;padding-left:1.5rem;padding-right:1.5rem")
+            p(style='color:#061086;padding-top:1.5rem;font-weight:700;font-size:1.875rem;line-height:2.25rem') LIMITD
             div
-              .flex.flex-row.pt-4(class='lg:w-full sm:flex-col md:w-full')
-                .flex.flex-wrap.gap-6(class='lg:gap-4')
-                    a.flex(href=`${facebook_link}`)
-                        .h-10.w-10(style='background-color: #EBEBEB;')
-                            img.mx-auto.mt-3(src='facebook1.png')
-                    a.flex(href=`${insta_link}`)
-                        .h-10.w-10.mr-0(style='background-color: #EBEBEB;')
-                            img.mx-auto.mt-3(src='insta.png')
-                    a.flex(href=`${twitter_link}`)
-                        .h-10.w-10.ml-0(style='background-color: #EBEBEB;')
-                            img.mx-auto.mt-3(src='twitter.png')
-          .text-center.pt-4(style='color: #979797;')
+              div(class='mediaWidth' style="display:flex;flex-direction:row;padding-top:1rem")
+                div(class='mediaGap' style="flex-wrap:wrap;display:flex;gap:1.5rem")
+                    a(href=`${facebook_link}` style="display:flex")
+                        div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center')
+                            img(src='facebook1.png' )
+                    a(href=`${insta_link}` style="display:flex")
+                        div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-right:0px')
+                            img(src='insta.png' )
+                    a(href=`${twitter_link}` style="display:flex")
+                        div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-left:0px')
+                            img(src='twitter.png' )
+          div(style='color: #979797;padding-top:1rem;text-align:center')
             | © 2020 Limitd. All Rights Reserved.
             br
             |                     The sender of this email is Limitd, located at #{sender_address}
@@ -53,5 +71,5 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
             br
             // 123 Subang Jaya, Selangor, 47600, Malaysia.
             | To unsubscribe, 
-            a.cursor-pointer(class='hover:text-blue-600' href=`${unsubscribe_link}`) click here
+            a(href=`${unsubscribe_link}` style="cursor:pointer") click here
             | .

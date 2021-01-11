@@ -3,29 +3,47 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
   head
     meta(name='viewport' content='width=device-width')
     meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
-    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css')
+    
     title LIMITD
+    style.
+
+      @media (min-width: 640px) {
+        .mediaWidth { flex-direction: coloumn; }
+      }      
+      @media (min-width: 768px) {
+        .mediaWidth { width: 100% }
+      }
+      
+      @media (min-width: 1024px) {
+        .mediaWidth { width: 100%; }
+        .mediaGap { gap: 1rem; }
+      }
+      
+      @media (min-width: 1280px) {
+        
+      } 
+
   body
-    .mx-auto(style='min-width: 640px;max-width: 640px;')
+    div(style='min-width: 640px;max-width: 640px;margin-left:auto;margin-right:auto')
       .col
         // header
-        .flex(style='background-color: #FAFAFA; padding: 22px 0 22px 0;')
-          p.text-5xl.font-bold(style='color:#061086;padding-left: 38px;') LIMITD
+        div(style='background-color: #FAFAFA; padding: 22px 0 22px 0;display:flex;')
+          p(style='color:#061086;padding-left: 38px;font-size:3rem;line-height:1;font-weight:700') LIMITD
         // Title
-        .mx-auto
-          p.text-center.font-bold(style='font-size: 30px;color:#061086;padding: 68px 0 68px 0;') SHIP ASAP!
+        div(style="margin-left:auto;margin-right:auto")
+          p(style='font-size: 30px;color:#061086;padding: 68px 0 68px 0;text-align:center;font-weight:700') SHIP ASAP!
         // text
         div
-          p(style='padding:0 51px 0 51px;font-size: 14px;')
+          p(style='padding:0 51px 0 51px;font-size: 14px;text-align: justify;')
             | Our records indicate that you have not shipped your item. Please ship your item immediately within 24 hours or we will cancel the sale. As per our 
             a(href='#{terms_cond_link}') Terms & Conditions
             | , you have agreed to ship your item within 2 working days once you have sold it, and we reserve the rights to charge you a penalty fee of 15% of the total sale value if you do not ship your item within the timeframe.
         // total table
-        .flex.flex-row.pt-8(style='padding:73px 51px 73px 51px;')
-          .flex.flex-col(class='w-1/2')
-            img.pt-16(src=`${shoe_image}` alt='')
-          .flex-col.text-justify.p-4(class='w-1/2')
-            .font-bold.text-4xl
+        div(style='padding:73px 51px 73px 51px;display:flex;flex-direction:row;padding-top:2rem')
+          div(style="width:50%;display:flex;flex-direction:column")
+            img(src=`${shoe_image}` style="padding-top:4rem;width:100%" alt='')
+          div(style="width:50%;flex-direction:column;text-align:justify;padding:1rem")
+            div(style="font-weight:700;font-size:2.25rem;line-height:2.5rem")
               | #{shoe_name}
               br
               br
@@ -37,50 +55,50 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
               |                         Order Number: #{order_number}
               br
               br
-              .flex.flex-row.pb-4.border-black(style='    border-bottom-width: 1px;')
-                .flex.flex-col(class='w-3/5')
-                  p Purchase Price:
-                  p Processing Fee:
-                  p Authentication Fee:
-                  p Shipping:
-                .text-left(class='w-2/5')
-                  p RM #{price}
-                  p RM #{processing_fee}
-                  p RM #{authentication_fee}
-                  p RM #{shipping_fee}
+              div(style='border-bottom-width: 1px;display:flex;flex-direction:row;padding-bottom:1rem;border-color:rgb(0,0,0);border-bottom-style:solid')
+                div(style="width:80%;display:flex;flex-direction:column")
+                  p(style="margin-top:0;margin-bottom:0") Purchase Price:
+                  p(style="margin-top:0;margin-bottom:0") Processing Fee:
+                  p(style="margin-top:0;margin-bottom:0") Authentication Fee:
+                  p(style="margin-top:0;margin-bottom:0") Shipping:
+                div(style="width:20%;display:flex;flex-direction:column")
+                  p(style="margin-top:0;margin-bottom:0") RM #{price}
+                  p(style="margin-top:0;margin-bottom:0") RM #{processing_fee}
+                  p(style="margin-top:0;margin-bottom:0") RM #{authentication_fee}
+                  p(style="margin-top:0;margin-bottom:0") RM #{shipping_fee}
                   //
                     <p>RM 9999</p>
                     <p>RM 9999</p>
                     <p>RM 9999</p>
                     <p>RM 9999</p>
               div
-                .flex.flex-row.pt-6
-                  p.font-extrabold(class='w-3/5') Total Payment
-                  p.font-extrabold(class='w-2/5') RM #{total}
+                div(style="display:flex;flex-direction:row;padding-top:1.5rem")
+                  p(style="width:80%;font-weight:800;margin-top:0;margin-bottom:0") Total Payment
+                  p(style="width:20%;font-weight:800;margin-top:0;margin-bottom:0") RM #{total}
         div
-          .flex.justify-center.text-xl(style='height: 50px;margin: 0px 0 78px 0;')
-            a.flex(href=`${button_link}`)
-                button.font-bold(style='background-color:#061086' )
-                    p.px-40.text-white Print Shipping Label
+          div(style='height: 50px;margin: 0px 0 78px 0;font-size:1.25rem;line-height:1.75rem;justify-content:center;display:flex')
+            a(href=`${button_link}` style="display:flex")
+                button(style='background-color:#061086;font-weight:700;border:none;cursor:pointer')
+                    p(style="padding-left:10rem;padding-right:10rem;color:rgb(255,255,255)") Print Shipping Label
                 
 
         // footer
-        .flex.flex-col(style='background-color: #FAFAFA; padding: 14px 0 10px 0;')
-          .flex.flex-row.justify-between.px-6
-            p.pt-6.font-bold.text-3xl(style='color:#061086') LIMITD
+        div(style='background-color: #FAFAFA; padding: 14px 0 10px 0;display:flex;flex-direction:column;')
+          div(style="display:flex;flex-direction:row;justify-content:space-between;padding-left:1.5rem;padding-right:1.5rem")
+            p(style='color:#061086;padding-top:1.5rem;font-weight:700;font-size:1.875rem;line-height:2.25rem') LIMITD
             div
-              .flex.flex-row.pt-4(class='lg:w-full sm:flex-col md:w-full')
-                .flex.flex-wrap.gap-6(class='lg:gap-4')
-                    a.flex(href=`${facebook_link}`)
-                        .h-10.w-10(style='background-color: #EBEBEB;')
-                            img.mx-auto.mt-3(src='facebook1.png')
-                    a.flex(href=`${insta_link}`)
-                        .h-10.w-10.mr-0(style='background-color: #EBEBEB;')
-                            img.mx-auto.mt-3(src='insta.png')
-                    a.flex(href=`${twitter_link}`)
-                        .h-10.w-10.ml-0(style='background-color: #EBEBEB;')
-                            img.mx-auto.mt-3(src='twitter.png')
-          .text-center.pt-4(style='color: #979797;')
+              div(class='mediaWidth' style="display:flex;flex-direction:row;padding-top:1rem")
+                div(class='mediaGap' style="flex-wrap:wrap;display:flex;gap:1.5rem")
+                    a(href=`${facebook_link}` style="display:flex")
+                        div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center')
+                            img(src='facebook1.png' )
+                    a(href=`${insta_link}` style="display:flex")
+                        div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-right:0px')
+                            img(src='insta.png' )
+                    a(href=`${twitter_link}` style="display:flex")
+                        div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-left:0px')
+                            img(src='twitter.png' )
+          div(style='color: #979797;padding-top:1rem;text-align:center')
             | © 2020 Limitd. All Rights Reserved.
             br
             |                     The sender of this email is Limitd, located at #{sender_address}
@@ -88,5 +106,5 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
             br
             // 123 Subang Jaya, Selangor, 47600, Malaysia.
             | To unsubscribe, 
-            a.cursor-pointer(class='hover:text-blue-600' href=`${unsubscribe_link}`) click here
+            a(href=`${unsubscribe_link}` style="cursor:pointer") click here
             | .
