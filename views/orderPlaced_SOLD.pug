@@ -38,7 +38,7 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
             | Your ask has been successfully accepted! Ship your item by 
             a(href='') #{shipby_date}
             |  to avoid any penalties. Once your item is authenticated by us, we will send you your payout. Please read our 
-            a(href='#{shipping_guide_link}') Shipping Guide
+            a(href='https://limitd.io/shippingGuide') Shipping Guide
             |  to prevent any shipping issues if this is your first time selling on Limitd.
         // total table
         div(style='padding:73px 51px 73px 51px;display:flex;flex-direction:row;padding-top:2rem')
@@ -59,7 +59,7 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
               br
               div(style='border-bottom-width: 1px;display:flex;flex-direction:row;padding-bottom:1rem;border-color:rgb(0,0,0);border-bottom-style:solid')
                 div(style="width:70%;display:flex;flex-direction:column")
-                  p(style="margin-top:0;margin-bottom:0") Purchase Price:
+                  p(style="margin-top:0;margin-bottom:0") #{flow_type} Price:
                   p(style="margin-top:0;margin-bottom:0") Processing Fee:
                   p(style="margin-top:0;margin-bottom:0") Authentication Fee:
                   p(style="margin-top:0;margin-bottom:0") Shipping:
