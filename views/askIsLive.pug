@@ -49,7 +49,7 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
         div(style='padding:73px 51px 73px 51px;display:flex;flex-direction:row;padding-top:2rem')
           div(style="width:50%;display:flex;flex-direction:column")
             img(src=`${shoe_image}` style="padding-top:4rem;width:100%" alt='')
-          div(style="width:50%;flex-direction:column;text-align:justify;padding:1rem")
+          div(style="width:50%;flex-direction:column;text-align:left;padding:1rem")
             div(style="font-weight:700;font-size:2.25rem;line-height:2.5rem")
               | #{shoe_name}
               br
@@ -60,12 +60,9 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
               |  Condition:  Brand New 100% Authentic
               br
               br
-              |  Order Number: #{order_number}
-              
-              br
               div(style='border-bottom-width: 1px;display:flex;flex-direction:row;padding-bottom:1rem;border-color:rgb(0,0,0);border-bottom-style:solid')
                 div(style="width:70%;display:flex;flex-direction:column")
-                  p(style="margin-top:0;margin-bottom:0") #{flow_type} Price:
+                  p(style="margin-top:0;margin-bottom:0") Ask Price:
                   p(style="margin-top:0;margin-bottom:0") Processing Fee:
                   p(style="margin-top:0;margin-bottom:0") Authentication Fee:
                   p(style="margin-top:0;margin-bottom:0") Shipping:
@@ -76,7 +73,7 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
                   p(style="margin-top:0;margin-bottom:0") RM #{shipping_fee}
               div
                 div(style="display:flex;flex-direction:row;padding-top:1.5rem")
-                  p(style="width:70%;font-weight:800;margin-top:0;margin-bottom:0") Total Payment
+                  p(style="width:70%;font-weight:800;margin-top:0;margin-bottom:0") Total Payout
                   p(style="width:30%;font-weight:800;margin-top:0;margin-bottom:0") RM #{total}
         div
           div(style='height: 50px;margin: 0px 0 78px 0;font-size:1.25rem;line-height:1.75rem;justify-content:center;display:flex')
@@ -90,21 +87,21 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
             div
               div(class='mediaWidth' style="display:flex;flex-direction:row;padding-top:1rem")
                 div(class='mediaGap' style="flex-wrap:wrap;display:flex;gap:1.5rem")
-                    a(href=`${facebook_link}` style="display:flex")
+                    a(href=`https://www.facebook.com/limitdsneakers/` style="display:flex")
                         div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center')
                             img(src='facebook1.png' )
-                    a(href=`${insta_link}` style="display:flex")
+                    a(href=`https://www.instagram.com/limitdsneakers/?hl=bn` style="display:flex")
                         div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-right:0px')
                             img(src='insta.png' )
                     a(href=`${twitter_link}` style="display:flex")
                         div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-left:0px')
                             img(src='twitter.png' )
           div(style='color: #979797;padding-top:1rem;text-align:center')
-            | © 2020 Limitd. All Rights Reserved.
+            | © 2021 Limitd. All Rights Reserved.
             br
             | The sender of this email is Limitd, located at #{sender_address}
             br
             br
-            | To unsubscribe, 
-            a(href=`${unsubscribe_link}` style="cursor:pointer") click here
-            | .
+            //- | To unsubscribe, 
+            //- a(href=`${unsubscribe_link}` style="cursor:pointer") click here
+            //- | .

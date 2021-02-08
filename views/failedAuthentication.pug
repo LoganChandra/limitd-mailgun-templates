@@ -55,7 +55,7 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
             //- img.pt-16(src="#{shoe_image}" alt='')
             img(src=`${shoe_image}` style="padding-top:4rem;width:100%" alt='')
 
-          div(style="width:50%;flex-direction:column;text-align:justify;padding:1rem")
+          div(style="width:50%;flex-direction:column;text-align:left;padding:1rem")
             div(style="font-weight:700;font-size:2.25rem;line-height:2.5rem")
               | #{shoe_name}
               br
@@ -70,7 +70,7 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
               br
               div(style='border-bottom-width: 1px;display:flex;flex-direction:row;padding-bottom:1rem;border-color:rgb(0,0,0);border-bottom-style:solid')
                 div(style="width:70%;display:flex;flex-direction:column")
-                  p(style="margin-top:0;margin-bottom:0") #{flow_type} Price:
+                  p(style="margin-top:0;margin-bottom:0") Purchase Price:
                   p(style="margin-top:0;margin-bottom:0") Processing Fee:
                   p(style="margin-top:0;margin-bottom:0") Authentication Fee:
                   p(style="margin-top:0;margin-bottom:0") Shipping:
@@ -99,22 +99,22 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
             p(style='color:#061086;font-weight:700;font-size:1.875rem;line-height:2.25rem') LIMITD
             div
               div(class='mediaWidth' style="display:flex;flex-direction:row;padding-top:1rem")
-                a(href=`${facebook_link}` style="display:flex")
+                a(href=`https://www.facebook.com/limitdsneakers/` style="display:flex")
                     div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center')
                         img(src='facebook1.png' )
-                a(href=`${insta_link}` style="display:flex")
+                a(href=`https://www.instagram.com/limitdsneakers/?hl=bn` style="display:flex")
                     div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-right:0px')
                         img(src='insta.png' )
                 a(href=`${twitter_link}` style="display:flex")
                     div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-left:0px')
                         img(src='twitter.png' )
           div(style='color: #979797;padding-top:1rem;text-align:center')
-            | © 2020 Limitd. All Rights Reserved.
+            | © 2021 Limitd. All Rights Reserved.
             br
             |                     The sender of this email is Limitd, located at #{sender_address}
             br
             br
             // 123 Subang Jaya, Selangor, 47600, Malaysia.
-            | To unsubscribe, 
-            a(href=`${unsubscribe_link}` style="cursor:pointer") click here
-            | .
+            //- | To unsubscribe, 
+            //- a(href=`${unsubscribe_link}` style="cursor:pointer") click here
+            //- | .
