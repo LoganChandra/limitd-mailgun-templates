@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
         shoe_size: 10,
         price: 800,
         processing_fee: 20,
-        authentication_fee: 10,
+        transaction_fee: 10,
         shipping_fee: 20,
         total: 850,
         button_link: 'https://google.com',
