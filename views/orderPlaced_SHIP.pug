@@ -5,29 +5,12 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
     meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
     
     title LIMITD
-    style.
-
-      @media (min-width: 640px) {
-        .mediaWidth { flex-direction: coloumn; }
-      }      
-      @media (min-width: 768px) {
-        .mediaWidth { width: 100% }
-      }
-      
-      @media (min-width: 1024px) {
-        .mediaWidth { width: 100%; }
-        .mediaGap { gap: 1rem; }
-      }
-      
-      @media (min-width: 1280px) {
-        
-      } 
 
   body
     div(style='min-width: 640px;max-width: 640px;margin-left:auto;margin-right:auto')
       .col
         // header
-        div(style='background-color: #FAFAFA; padding: 22px 0 22px 0;display:flex;')
+        div(style='background-color: #FAFAFA; padding: 22px 0 22px 0;')
           p(style='color:#061086;padding-left: 38px;font-size:3rem;line-height:1;font-weight:700') LIMITD
         // Title
         div(style="margin-left:auto;margin-right:auto")
@@ -41,66 +24,75 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
             br
             br
             | (Ignore this email if you have already shipped your item)
-        // total table
-        div(style='padding:73px 51px 73px 51px;display:flex;flex-direction:row;padding-top:2rem')
-          div(style="width:50%;display:flex;flex-direction:column")
-            img(src=`${shoe_image}` style="padding-top:4rem;width:100%" alt='')
-          div(style="width:50%;flex-direction:column;text-align:left;padding:1rem")
-            div(style="font-weight:700;font-size:2.25rem;line-height:2.5rem")
-              | #{shoe_name}
-              br
-              br
-            div(style='font-size:12px')
-              | Size: UK #{shoe_size}
-              br
-              |                         Condition:  Brand New 100% Authentic
-              br
-              |                         Order Number: #{order_number}
-              br
-              br
-              div(style='border-bottom-width: 1px;display:flex;flex-direction:row;padding-bottom:1rem;border-color:rgb(0,0,0);border-bottom-style:solid')
-                div(style="width:70%;display:flex;flex-direction:column")
-                  p(style="margin-top:0;margin-bottom:0") Sale Price:
-                  p(style="margin-top:0;margin-bottom:0") Processing Fee:
-                  p(style="margin-top:0;margin-bottom:0") Transaction Fee:
-                  p(style="margin-top:0;margin-bottom:0") Shipping:
-                div(style="width:50%;display:flex;flex-direction:column")
-                  p(style="margin-top:0;margin-bottom:0;text-align: right;") RM #{price}
-                  p(style="margin-top:0;margin-bottom:0;text-align: right;") RM #{processing_fee}
-                  p(style="margin-top:0;margin-bottom:0;text-align: right;") RM #{transaction_fee}
-                  p(style="margin-top:0;margin-bottom:0;text-align: right;") RM #{shipping_fee}
-                  //
-                    <p>RM 9999</p>
-                    <p>RM 9999</p>
-                    <p>RM 9999</p>
-                    <p>RM 9999</p>
-              div
-                div(style="display:flex;flex-direction:row;padding-top:1.5rem")
-                  p(style="width:70%;font-weight:800;margin-top:0;margin-bottom:0") Total Payout
-                  p(style="width:50%;font-weight:800;margin-top:0;margin-bottom:0;text-align:right;") RM #{total}
+        // total new table
+        div(style='padding:73px 51px 73px 51px;padding-top:2rem')
+          table(style='')
+            tr(style='')
+              td(style="width:50%")
+                img(src=`${shoe_image}` style="padding-top:4rem;width:100%" alt='')
+              td(style="text-align:left;padding:1rem;width:50%")
+                div(style="font-weight:700;font-size:2.25rem;line-height:2.5rem")
+                  | #{shoe_name}
+                  br
+                  br
+                div(style='font-size:12px')
+                  | Size: UK #{shoe_size}
+                  br
+                  |                         Condition:  Brand New 100% Authentic
+                  br
+                  |                         Order Number: #{order_number}
+                  br
+                  br
+                  div(style='border-bottom-width: 1px;padding-bottom:1rem;border-color:rgb(0,0,0);border-bottom-style:solid')
+                    table(style="width:100%")
+                      tr(style="width:100%")
+                        td(style="width:50%;")
+                          p(style="margin-top:0;margin-bottom:0") Sale Price:
+                          p(style="margin-top:0;margin-bottom:0") Processing Fee:
+                          p(style="margin-top:0;margin-bottom:0") Transaction Fee:
+                          p(style="margin-top:0;margin-bottom:0") Shipping:
+                        td(style="width:50%;")
+                          p(style="margin-top:0;margin-bottom:0;text-align: right;") RM #{price}
+                          p(style="margin-top:0;margin-bottom:0;text-align: right;") RM #{processing_fee}
+                          p(style="margin-top:0;margin-bottom:0;text-align: right;") RM #{transaction_fee}
+                          p(style="margin-top:0;margin-bottom:0;text-align: right;") RM #{shipping_fee}
+                  div
+                    div(style="padding-top:1.5rem")
+                    table(style="width:100%")
+                      tr(style="width:100%")
+                        td(style="width:70%;font-weight:800;margin-top:0;margin-bottom:0") Total Payout
+                        td(style="width:50%;font-weight:800;margin-top:0;margin-bottom:0;text-align:right;") RM #{total}
         div
-          div(style='height: 50px;margin: 0px 0 78px 0;font-size:1.25rem;line-height:1.75rem;justify-content:center;display:flex')
-            a(href=`${button_link}`, target="_blank" style="display:flex")
+          div(style='height: 50px;margin: 0px 0 78px 0;font-size:1.25rem;line-height:1.75rem;text-align:center;')
+            a(href=`${button_link}` style="")
                 button(style='background-color:#061086;font-weight:700;border:none;cursor:pointer')
                     p(style="padding-left:10rem;padding-right:10rem;color:rgb(255,255,255)") Print Shipping Label
                 
 
         // footer
-        div(style='background-color: #FAFAFA; padding: 14px 0 10px 0;display:flex;flex-direction:column;')
-          div(style="display:flex;flex-direction:row;justify-content:space-between;padding-left:1.5rem;padding-right:1.5rem")
-            p(style='color:#061086;font-weight:700;font-size:1.875rem;line-height:2.25rem') LIMITD
-            div
-              div(class='mediaWidth' style="display:flex;flex-direction:row;padding-top:1rem")
-                div(class='mediaGap' style="flex-wrap:wrap;display:flex;gap:1.5rem")
-                    a(href=`https://www.facebook.com/limitdsneakers/` style="display:flex")
-                        div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center')
+        div(style='background-color: #FAFAFA; padding: 14px 0 10px 0;;')
+          div(style="padding-left:1.5rem;padding-right:1.5rem")
+            table(style="width:100%")
+              tr(style="width:100%")
+                td(style='width:20%;color:#061086;font-weight:700;font-size:1.875rem;line-height:2.25rem') LIMITD
+                td(style="width:20%")
+                  table(class='' style="margin-left: auto;")
+                    tr(class='')
+                      td( style='background-color: lightgray;text-align:center;height:2.5rem;width:2.5rem;align-items: center;margin-left:0px;')
+                        a(style="height:100%;width:100%" href=`https://www.facebook.com/limitdsneakers/` target="_blank")
+                          p(style='margin:0;padding-top: 3px;')
                             img(src='facebook1.png' )
-                    a(href=`https://www.instagram.com/limitdsneakers/?hl=bn` style="display:flex")
-                        div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-right:0px')
+                      td(style="width:5px")  
+                      td( style='background-color: lightgray;text-align:center;height:2.5rem;width:2.5rem;align-items: center;margin-left:0px;')
+                        a(style="height:100%;width:100%" href=`https://www.instagram.com/limitdsneakers/?hl=bn` target="_blank")
+                          p(style='margin:0;padding-top: 3px;')
                             img(src='insta.png' )
-                    a(href=`${twitter_link}` style="display:flex")
-                        div(style='background-color:#EBEBEB;height:2.5rem;width:2.5rem;display:flex;justify-content: center;align-items: center;margin-left:0px')
+                      td(style="width:5px")
+                      td(style='background-color: lightgray;text-align:center;height:2.5rem;width:2.5rem;align-items: center;margin-left:0px;')
+                        a(style="height:100%;width:100%" href=`${twitter_link}` target="_blank")
+                          p(style='margin:0;padding-top: 3px;')
                             img(src='twitter.png' )
+              
           div(style='color: #979797;padding-top:1rem;text-align:center')
             | © 2021 Limitd. All Rights Reserved.
             br
