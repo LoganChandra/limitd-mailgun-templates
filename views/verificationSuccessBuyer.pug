@@ -4,8 +4,31 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
     meta(name='viewport' content='width=device-width')
     meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
     
-    title LIMITD
-
+    title LIMITD  
+    style.
+      @media (min-width:320px)  { 
+        .shoetitle{
+          font-size: 1.25rem;
+          line-height:1.5rem
+        } 
+        .calcText{
+          font-size: 10px;
+        }
+      }
+      @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+      @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+      @media (min-width:801px)  {}
+      @media (min-width:1025px) { 
+        .shoetitle{
+          font-size: 2.25rem;
+          line-height:2.5rem
+        } 
+        .calcText{
+          font-size: 12px;
+        }
+      
+      }
+      @media (min-width:1281px) { /* hi-res laptops and desktops */ }
   body
     div(style='min-width: 640px;max-width: 640px;margin-left:auto;margin-right:auto')
       .col
@@ -23,17 +46,17 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
           p(style='padding:0 51px 0 51px;font-size: 14px;text-align: justify;')
             | Good News! Your item has been verified authentic and is now on its way to you. You can track your parcel using the link below.
         // total new table
-        div(style='padding:73px 51px 73px 51px;padding-top:2rem')
+        div(style='padding:73px 20px 73px 20px;padding-top:2rem')
           table(style='')
             tr(style='')
               td(style="width:50%")
                 img(src=`${shoe_image}` style="padding-top:4rem;width:100%" alt='')
               td(style="text-align:left;padding:1rem;width:50%")
-                div(style="font-weight:700;font-size:2.25rem;line-height:2.5rem")
+                div(style="font-weight:700;" class="shoetitle")
                   | #{shoe_name}
                   br
                   br
-                div(style='font-size:12px')
+                div(style='' class="calcText")
                   | Size: UK #{shoe_size}
                   br
                   |                         Condition:  Brand New 100% Authentic

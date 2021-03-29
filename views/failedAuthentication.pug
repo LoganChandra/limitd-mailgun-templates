@@ -5,7 +5,13 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
     meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
     
     title LIMITD
-
+    style.
+      @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+      @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+      @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+      @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+      @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+      @media (min-width:1281px) { /* hi-res laptops and desktops */ }
   body
     div(style='min-width: 640px;max-width: 640px;margin-left:auto;margin-right:auto')
       .col
@@ -33,7 +39,7 @@ html(style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-siz
             br
             |                 On the bright side, we have successfully prevented you from falling victim to receiving this item. We have processed a full refund for you immediately and the amount should reflect in your account balance within 14 working days.
         // total new table
-        div(style='padding:73px 51px 73px 51px;padding-top:2rem')
+        div(style='padding:73px 20px 73px 20px;padding-top:2rem')
           table(style='')
             tr(style='')
               td(style="width:50%")
